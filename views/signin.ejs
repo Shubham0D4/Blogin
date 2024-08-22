@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogin - Sign In</title>
+    <link rel="stylesheet" href="/signin.css">
+    <link rel="stylesheet" href="/fonts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200..700&family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="ttl oswald-bold" style="font-size: 4rem;">
+        <div>Blog<span>in.</span></div>
+        <form action="/tologin" method="get">
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <div class="form">
+        <div class="ubuntu-regular" style="font-size: 3rem;">Sign in</div>
+        
+        <form action="/signdata" method="post">
+
+            <div class="fname">
+                <input type="text" name="fname" id="fname" placeholder="First Name" required>
+            </div>
+            <div class="mname">
+                <input type="text" name="mname" id="mname" placeholder="Middle Name" required>
+            </div>
+            <div class="lname">
+                <input type="text" name="lname" id="lname" placeholder="Last Name" required>
+            </div>
+            <div class="email">
+                <input type="email" name="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="pass">
+                <input type="password" name="password" id="pass" placeholder="Password" required>
+            </div>
+            <div class="cpass">
+                <input type="password" name="cpassword" id="cpass" placeholder="Confirm Password" required>
+            </div>
+            <div class="btn">
+                <button type="submit" class="btn">Submit</button>
+            </div>
+        </form>
+            
+    </div>
+</body>
+</html>

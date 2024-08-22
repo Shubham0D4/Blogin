@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Hides scrollbars */
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(31, 90, 253, 0.8), rgba(255, 217, 0, 0.8)), url('./images/back.webp') no-repeat center center/cover;
+    padding: 0.5rem;
+    color: #fff;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 16px;
+    overflow-y: auto;
+}
+
+.page::-webkit-scrollbar {
+    display: none;
+}
+
+.profile h1, .profile h3, .profile h5 {
+    margin: 0.5rem 0;
+}
+
+.profile .btn {
+    margin: 0.5rem;
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #1f5afd;
+    color: #fff;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.bttn{
+    display: flex;
+}
+
+.profile .btn:hover {
+    background-color: #153fab;
+    transform: scale(1.05);
+}
+
+.wrtitten .article {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.wrtitten .article button {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+}
+
+.wrtitten .article button h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.wrtitten .article button:hover h2 {
+    text-decoration: underline;
+}
+
+.wrtitten .article h5, .wrtitten .article h6 {
+    margin: 0.3rem 0;
+    font-weight: 300;
+}
+
+.wrtitten .delete {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.wrtitten .delete button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #ff5757;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.wrtitten .delete button:hover {
+    background-color: #e04747;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #333;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    color: #fff;
+}
+
+.modal-content input {
+    width: 80%;
+    padding: 0.7rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 8px;
+}
+
+.modal-content .btn {
+    margin-top: 1rem;
+    padding: 0.7rem 2rem;
+    background-color: #ff5757;
+}
+
+.modal-content .btn:hover {
+    background-color: #e04747;
+}
+
+.close {
+    color: #fff;
+    float: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ff5757;
+}
+
+@media (max-width: 768px) {
+    .profile h1 {
+        font-size: 2rem;
+    }
+
+    .profile h3 {
+        font-size: 1.5rem;
+    }
+
+    .profile h5 {
+        font-size: 1rem;
+    }
+
+    .wrtitten .article button h2 {
+        font-size: 1.2rem;
+    }
+
+    .wrtitten .delete button {
+        font-size: 0.8rem;
+    }
+
+    .modal-content input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile h1 {
+        font-size: 1.5rem;
+    }
+
+    .profile h3 {
+        font-size: 1.2rem;
+    }
+
+    .profile h5 {
+        font-size: 0.9rem;
+    }
+
+    .wrtitten .article button h2 {
+        font-size: 1rem;
+    }
+
+    .wrtitten .delete button {
+        font-size: 0.7rem;
+    }
+
+    .modal-content input {
+        width: 100%;
+    }
+}

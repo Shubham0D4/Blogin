@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    background: linear-gradient(135deg, rgba(31, 90, 253, 0.8), rgba(255, 217, 0, 0.8)), url('/images/back.webp') no-repeat center center/cover;
+    color: #fff;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.block {
+    width: 100%;
+    max-width: 800px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile h1 {
+    font-size: 2.5rem;
+    color: #ffda00;
+    margin-bottom: 0.5rem;
+}
+
+.profile h2 {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.art h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #ffda00;
+    text-align: center;
+}
+
+.article {
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.article form button {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    text-align: left;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.article form button:hover {
+    background-color: rgba(31, 90, 253, 0.8);
+    transform: translateY(-3px);
+}
+
+.article h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.article h3 {
+    font-size: 1rem;
+    margin: 0;
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .profile h1 {
+        font-size: 2rem;
+    }
+
+    .profile h2 {
+        font-size: 1.5rem;
+    }
+
+    .art h2 {
+        font-size: 1.5rem;
+    }
+
+    .article h2 {
+        font-size: 1.3rem;
+    }
+
+    .article h3 {
+        font-size: 0.9rem;
+    }
+
+    .block {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile h1 {
+        font-size: 1.8rem;
+    }
+
+    .profile h2 {
+        font-size: 1.3rem;
+    }
+
+    .art h2 {
+        font-size: 1.3rem;
+    }
+
+    .article h2 {
+        font-size: 1.1rem;
+    }
+
+    .article h3 {
+        font-size: 0.8rem;
+    }
+
+    .block {
+        padding: 1rem;
+    }
+}

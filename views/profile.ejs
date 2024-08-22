@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - <%= data[0].firstName %></title>
+    <link rel="stylesheet" href="/profile.css">
+    <link rel="stylesheet" href="/fonts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200..700&family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="bio page">
+        <div class="profile">
+            <h1>ID: <%= data[0].id %> </h1>
+            <h3><%= data[0].firstName %> <%= data[0].midName %> <%= data[0].lastName %></h3>
+            <h5>Email: <%= data[0].mail %></h5>
+            <div class="bttn">
+                <div class="logout">
+                    <button type="button" class="btn">Logout</button>
+                </div>
+                <form action="/read/<%= data[0].id %>" method="get">
+                    <button type="submit" class="btn">Read</button>
+                </form>
+                <form action="/write/<%= data[0].id %>" method="get">
+                    <button type="submit" class="btn">Write</button>
+                </form>
+                <form action="/seek/<%= data[0].id %>" method="get">
+                    <button type="submit" class="btn">Seek new friends</button>
+                </form>
+            </div>
+            
+        </div>
+        <div class="wrtitten page">
+            <% data.slice(1, data.length).forEach(article => { %>
+                <div class="article">
+                    <form action="/article/<%= article.articleId %>" method="get">
+                        <button type="submit">
+                            <h2><%= article.title %></h2>
+                            <h5><%= article.articleId %></h5>
+                            <% if (article.ispublic === 1) { %>
+                                <h6>Public</h6>
+                            <% } else { %>
+                                <h6>Private</h6>
+                            <% } %>
+                        </button>
+                    </form>
+                    <div class="delete">
+                        <form action="/update-art/<%= article.articleId %>" method="get">
+                            <button type="submit">Update access</button>
+                        </form>
+                        <form action="/delete-art/<%= article.articleId %>" method="get">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+        <!-- <div class="read page"> -->
+            
+        <!-- </div> -->
+    </div>
+
+    <div id="logoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Do you confirm to Sign out?</h2>
+            <form action="/delete-user" method="post">
+                <input type="text" name="userid" id="" placeholder="Enter your id to confirm logout" required>
+                <button id="confirmLogout" type="submit" class="btn">Yes</button>
+            </form>
+            <button id="cancelLogout" class="btn">Cancel</button>
+        </div>
+    </div>
+
+    <script src="/profile.js"></script>
+</body>
+</html>

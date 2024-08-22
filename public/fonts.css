@@ -1,0 +1,36 @@
+
+/* //fonts */
+.oswald-bold {   /*for main heading and names */
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 6rem;
+}
+
+.playwrite-cuba { /*for sub heading and names */
+    font-family: "Playwrite CU", cursive;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    text-shadow: 8xp 8px 2px 4px rgb(206, 206, 206);
+}
+.arsenal-sc-regular { /*for text and names */
+    font-family: "Arsenal SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.fira{
+    color: rgb(1, 10, 36);
+    font-family: "Fira Sans", sans-serif;
+    font-weight:400;
+    font-style: normal;
+}
+
+.ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    font-style: normal;
+    color: rgb(255, 217, 0);
+}

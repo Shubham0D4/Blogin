@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Articles</title>
+    <link rel="stylesheet" href="/read.css">
+    <link rel="stylesheet" href="/fonts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200..700&family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="options">
+        
+    </div>
+    <div class="list">
+        <% articles.forEach(article=>{ %>
+            <form action="/readme/<%= article.articleId %>" method="get">
+                <button type="submit">
+                    <div class="list-item">
+                        <h2><%= article.title %></h2>
+                        <h4><%= article.articleId %></h4>
+                        <h5>userid: <%= " " %><%= article.userid %></h5>
+                    </div>
+                </button>
+            </form>
+        <% }); %>
+    </div>
+</body>
+</html>

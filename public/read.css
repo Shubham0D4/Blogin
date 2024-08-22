@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(31, 90, 253, 0.8), rgba(255, 217, 0, 0.8)), url('./images/back.webp') no-repeat center center/cover;
+    padding: 0.5rem;
+    color: #fff;
+}
+
+.options {
+    width: 100%;
+    max-width: 1200px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.list {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 16px;
+    padding: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.list::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in Webkit browsers */
+}
+
+.list-item {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.list-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.list-item h4, .list-item h5 {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 0.2rem 0;
+}
+
+.list-item:hover {
+    background-color: rgba(31, 90, 253, 0.7);
+    transform: translateY(-5px);
+}
+
+button {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+}
+
+button:focus {
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .list-item h2 {
+        font-size: 1.3rem;
+    }
+
+    .list-item h4, .list-item h5 {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .list-item h2 {
+        font-size: 1.1rem;
+    }
+
+    .list-item h4, .list-item h5 {
+        font-size: 0.8rem;
+    }
+
+    .list {
+        padding: 0.5rem;
+    }
+}
