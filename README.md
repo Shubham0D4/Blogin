@@ -4,7 +4,7 @@ Blogin is a Website for blog writers to write their blogs online and saving them
 <h3>To initialise the project on localhost you need to follow these steps:</h3>
 
 <h4>Step 1:</h4>
-<h6>Navigate to parent folder of this project. More specifically Blogin</h6>
+<h6>In terminal, Navigate to parent folder of this project. More specifically Blogin</h6>
 
 <h4>Step 2:</h4>
 <h6>Run the command: `npm install`</h6>
